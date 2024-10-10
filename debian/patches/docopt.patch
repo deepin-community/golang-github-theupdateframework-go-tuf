@@ -1,0 +1,312 @@
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf-client/get.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf-client/get.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf-client/get.go
+@@ -4,7 +4,7 @@ import (
+ 	"io"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	tuf "github.com/theupdateframework/go-tuf/client"
+ 	"github.com/theupdateframework/go-tuf/util"
+ )
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf-client/init.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf-client/init.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf-client/init.go
+@@ -4,7 +4,7 @@ import (
+ 	"io"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	tuf "github.com/theupdateframework/go-tuf/client"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf-client/list.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf-client/list.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf-client/list.go
+@@ -6,7 +6,7 @@ import (
+ 	"text/tabwriter"
+ 
+ 	"github.com/dustin/go-humanize"
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	tuf "github.com/theupdateframework/go-tuf/client"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf-client/main.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf-client/main.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf-client/main.go
+@@ -5,7 +5,7 @@ import (
+ 	"log"
+ 	"os"
+ 
+-	docopt "github.com/flynn/go-docopt"
++	docopt "github.com/docopt/go-docopt"
+ 	tuf "github.com/theupdateframework/go-tuf/client"
+ 	tuf_leveldbstore "github.com/theupdateframework/go-tuf/client/leveldbstore"
+ )
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/add.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/add.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/add.go
+@@ -3,7 +3,7 @@ package main
+ import (
+ 	"encoding/json"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/add_signatures.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/add_signatures.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/add_signatures.go
+@@ -5,7 +5,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ 	"github.com/theupdateframework/go-tuf/data"
+ )
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/change_passphrase.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/change_passphrase.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/change_passphrase.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/clean.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/clean.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/clean.go
+@@ -4,7 +4,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/commit.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/commit.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/commit.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/gen_key.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/gen_key.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/gen_key.go
+@@ -5,7 +5,7 @@ import (
+ 	"os"
+ 	"time"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ 	"github.com/theupdateframework/go-tuf/data"
+ )
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/get_threshold.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/get_threshold.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/get_threshold.go
+@@ -4,7 +4,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/init.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/init.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/init.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/main.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/main.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/main.go
+@@ -11,7 +11,7 @@ import (
+ 	"syscall"
+ 	"time"
+ 
+-	docopt "github.com/flynn/go-docopt"
++	docopt "github.com/docopt/go-docopt"
+ 	tuf "github.com/theupdateframework/go-tuf"
+ 	"github.com/theupdateframework/go-tuf/util"
+ 	"golang.org/x/term"
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/payload.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/payload.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/payload.go
+@@ -4,7 +4,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/regenerate.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/regenerate.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/regenerate.go
+@@ -3,7 +3,7 @@ package main
+ import (
+ 	"log"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/remove.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/remove.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/remove.go
+@@ -3,7 +3,7 @@ package main
+ import (
+ 	"errors"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/revoke_key.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/revoke_key.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/revoke_key.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/root_keys.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/root_keys.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/root_keys.go
+@@ -5,7 +5,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/set_threshold.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/set_threshold.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/set_threshold.go
+@@ -5,7 +5,7 @@ import (
+ 	"os"
+ 	"strconv"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/sign.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/sign.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/sign.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/sign_payload.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/sign_payload.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/sign_payload.go
+@@ -5,7 +5,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	tuf "github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/snapshot.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/snapshot.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/snapshot.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/status.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/status.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/status.go
+@@ -4,7 +4,7 @@ import (
+ 	"fmt"
+ 	"time"
+ 
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 
+Index: golang-github-theupdateframework-go-tuf/cmd/tuf/timestamp.go
+===================================================================
+--- golang-github-theupdateframework-go-tuf.orig/cmd/tuf/timestamp.go
++++ golang-github-theupdateframework-go-tuf/cmd/tuf/timestamp.go
+@@ -1,7 +1,7 @@
+ package main
+ 
+ import (
+-	"github.com/flynn/go-docopt"
++	"github.com/docopt/go-docopt"
+ 	"github.com/theupdateframework/go-tuf"
+ )
+ 

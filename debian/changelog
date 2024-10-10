@@ -1,5 +1,37 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-theupdateframework-go-tuf (0.6.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 20 Nov 2023 22:55:28 +0000
+
+golang-github-theupdateframework-go-tuf (0.5.2-5) unstable; urgency=medium
+
+  * Revert "Delete unncessary testdata from package" and lintian override
+    instead. This unbreaks autopkgtests
+
+ -- Reinhard Tartler <siretart@tauware.de>  Tue, 12 Sep 2023 06:54:01 -0400
+
+golang-github-theupdateframework-go-tuf (0.5.2-4) unstable; urgency=medium
+
+  * compile against flynn/docopt -> docopt/docopt
+
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 11 Sep 2023 20:43:08 -0400
+
+golang-github-theupdateframework-go-tuf (0.5.2-3) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Tue, 22 Aug 2023 20:14:28 -0400
+
+golang-github-theupdateframework-go-tuf (0.5.2-2) experimental; urgency=medium
+
+  * Incorportated ftp-master review for debian/copyright
+  * Target experimental
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 12 Jul 2023 07:26:45 -0400
+
+golang-github-theupdateframework-go-tuf (0.5.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1030557)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 04 Feb 2023 19:07:03 -0500

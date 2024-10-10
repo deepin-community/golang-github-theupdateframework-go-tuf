@@ -1,15 +1,45 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-theupdateframework-go-tuf
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Reinhard Tartler <siretart@tauware.de>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-docopt-docopt-go-dev,
+               golang-github-dustin-go-humanize-dev,
+               golang-github-golang-leveldb-dev,
+               golang-github-google-gofuzz-dev,
+               golang-github-secure-systems-lab-go-securesystemslib-dev,
+               golang-github-stretchr-testify-dev,
+               golang-github-syndtr-goleveldb-dev,
+               golang-golang-x-crypto-dev,
+               golang-golang-x-term-dev,
+               golang-gopkg-check.v1-dev,
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-theupdateframework-go-tuf
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-theupdateframework-go-tuf.git
+Homepage: https://github.com/theupdateframework/go-tuf
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/theupdateframework/go-tuf
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-theupdateframework-go-tuf-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-github-dustin-go-humanize-dev,
+         golang-github-docopt-docopt-go-dev,
+         golang-github-golang-leveldb-dev,
+         golang-github-google-gofuzz-dev,
+         golang-github-secure-systems-lab-go-securesystemslib-dev,
+         golang-github-stretchr-testify-dev,
+         golang-github-syndtr-goleveldb-dev,
+         golang-golang-x-crypto-dev,
+         golang-golang-x-term-dev,
+         golang-gopkg-check.v1-dev,
+         ${misc:Depends}
+Description: Securing software in golang (library)
+ The Update Framework (TUF) helps developers maintain the security of software
+ update systems, providing protection even against attackers that compromise
+ the repository or signing keys. TUF provides a flexible framework and
+ specification that developers can adopt into any software update system.
