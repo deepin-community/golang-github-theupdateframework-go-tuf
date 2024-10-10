@@ -1,4 +1,9 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_EXCLUDES := python_interop go-tuf/cmd/tuf
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	dh_auto_test -O--builddirectory=_build -O--buildsystem=golang
